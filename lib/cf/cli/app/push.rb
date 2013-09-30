@@ -23,6 +23,7 @@ module CF::App
                         end
                       }
     input :memory,    :desc => "Memory limit"
+    input :cpu_quota,       :desc => "Cpu limit"
     input :instances, :desc => "Number of instances to run", :type => :integer
     input :command,   :desc => "Startup command", :default => nil
     input :plan,      :desc => "Application plan"

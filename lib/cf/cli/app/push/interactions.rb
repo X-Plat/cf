@@ -35,6 +35,13 @@ module CF::App
           :default => default || "128M")
     end
 
+    def ask_cpu_quota
+      ask("Cpu cores",
+          :choices => cpu_choices,
+          :allow_other => true,
+          :default => "0.1")
+    end
+
     def ask_instances
       ask("Instances", :default => 1)
     end

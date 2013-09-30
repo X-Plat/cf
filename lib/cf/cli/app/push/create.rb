@@ -13,6 +13,7 @@ module CF::App
       inputs[:command] = input[:command] if input.has?(:command) || !has_procfile?
 
       inputs[:memory] = megabytes(input[:memory, human_mb(256)])
+      inputs[:cpu_quota] = input[:cpu_quota]
       inputs[:stack] = input[:stack]
 
       inputs

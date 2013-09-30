@@ -37,6 +37,10 @@ module CF
         [128, 256, 512, 1024].map{|n| human_mb(n)}
       end
 
+      def cpu_choices
+        ["0.1", "0.5", "1.0", "2.0", "4.0"]
+      end
+
       def human_mb(num)
         human_size(num * 1024 * 1024, 0)
       end
